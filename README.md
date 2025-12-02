@@ -35,19 +35,6 @@
 
 ---
 
-## 🎨 Screenshots
-
-**Main Game Screen**  
-![Game Screen](images/game_screen.png)
-
-**Tank Detail Close-up**  
-![Tank Detail](images/tank_detail.png)
-
-**Targets & HUD**  
-![HUD](images/hud_view.png)
-
----
-
 ## ⌨️ Controls
 
 | Key | Action |
@@ -66,3 +53,21 @@
 
 ## 🗂️ Project Structure
 
+.
+├── main.cpp # Initializes GLUT, main loop, and game callbacks
+├── game.h / game.cpp # Game logic: tank, bullets, targets, scoring
+├── graphics.h / graphics.cpp # Drawing utilities, tank rendering, track & scenery
+├── images/ # Screenshots for README
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Compilation & Execution
+
+**Windows (g++ / MinGW + freeglut)**:
+```bash
+g++ main.cpp game.cpp graphics.cpp -lfreeglut -lopengl32 -lglu32 -o TankGame.exe
+./TankGame.exe
